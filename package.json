@@ -1,0 +1,52 @@
+{
+  "name": "bitcoinjs-on-ripple",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "example",
+    "package.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/you21979/node-bitcoinjs-on-ripple.git"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "keywords": [
+    "slip-0010"
+  ],
+  "dependencies": {
+    "@types/create-hash": "^1.2.0",
+    "create-hash": "^1.2.0",
+    "ripple-bs58check": "2.0.2"
+  },
+  "devDependencies": {
+    "bip39": "3.0.2",
+    "bip32": "2.0.3",
+    "@types/node": "^9.6.0",
+    "@types/mocha": "^5.0.0",
+    "@types/create-hash": "1.2.0",
+    "typescript": "^3.0.0",
+    "istanbul": "^0.4.5",
+    "coveralls": "^3.0.0",
+    "mocha": "^5.0.5"
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "./node_modules/.bin/tsc -p ./",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha ./dist/test",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+  },
+  "author": "Yuki Akiyama",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/you21979/node-bitcoinjs-on-ripple/issues"
+  },
+  "homepage": "https://github.com/you21979/node-bitcoinjs-on-ripple#readme"
+}
